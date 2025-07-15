@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Bắt đầu nội dung CSS của bạn */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-green-bar {
+      background: #03c75a;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .logo span {
+      font-weight: normal;
+    }
+
+    .search-box {
+      flex: 1;
+      margin: 0 20px;
+      display: flex;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+    }
+    .search-box button {
+      padding: 8px 12px;
+      background: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .top-actions .btn {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    .black-nav {
+      background-color: #111;
+    }
+    .black-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .black-nav li a {
+      display: block;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+    }
+    .black-nav li a:hover {
+      background: #222;
+    }
+
+    .main-box {
+      padding: 20px;
+    }
+    /* Kết thúc nội dung CSS của bạn */
+  </style>
+
+</head>
+<body>
+
+<header class="top-green-bar">
+  <div class="logo">T<span>Cinema</span></div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Bạn tìm gì hôm nay?">
+    <button>Tìm kiếm</button>
+  </div>
+
+  <div class="top-actions">
+    <a href="#" class="btn"><i class="fa fa-ticket"></i> Vé của tôi</a>
+    <a href="#" class="btn">Đăng nhập</a>
+    <a href="#" class="btn">Đăng ký</a>
+  </div>
+</header>
+
+<nav class="black-nav">
+  <ul>
+    <li><a th:href="@{/}">TRANG CHỦ</a></li>
+    <li><a th:href="@{/schedule}">LỊCH CHIẾU</a></li>
+    <li><a th:href="@{/movies}">PHIM</a></li>
+    <li><a th:href="@{/promotions}">KHUYẾN MÃI</a></li>
+    <li><a th:href="@{/contact}">LIÊN HỆ</a></li>
+  </ul>
+</nav>
+
+<main class="main-box" layout:fragment="content">
+  </main>
+
+</body>
+</html>
