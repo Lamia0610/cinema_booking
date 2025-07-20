@@ -2,16 +2,295 @@
 <html lang="vi"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout}"> 
-
+      layout:decorate="~{layout}">
 <head>
-  <title>Trang chủ</title>
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  />
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/home_style.css}" />
 </head>
 
-<body>
-  <main layout:fragment="content">
-    <h2>Chào mừng đến với trang chủ</h2>
-    <p>Đây là phần nội dung thực của trang.</p>
-  </main>
-</body>
-</html>
+<main layout:fragment="content">
+    <div class="owl-carousel owl-theme" id="film-carousel">
+        <div class="item"><img th:src="@{/images/xi-trum.jpg}" alt="Xì Trum"></div>
+        <div class="item"><img th:src="@{/images/con-nit-quy.jpg}" alt="Con Nít Quỷ"></div>
+        <div class="item"><img th:src="@{/images/cong-tu-bac-lieu.jpg}" alt="Công tử Bạc Liêu"></div>
+        <div class="item"><img th:src="@{/images/moana.jpg}" alt="Moana"></div>
+        <div class="item"><img th:src="@{/images/dieu-uoc-cuoi-cung.jpg}" alt="Điều Ước Cuối Cùng"></div>
+    </div>
+
+    <section class="filmoja-top-movies-area section_30">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="filmoja-heading">
+                      <h2>Phim:<span> Đang chiếu</span></h2>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="amy-movie-carousel-2 ">
+                      <div class="amy-movie-list">
+                          <div class="amy-movie-items slick-initialized slick-slider">
+                              <!-- Movie Item 1 -->
+                              <div class="amy-movie-item">
+                                  <div class="amy-movie-item-inner">
+                                      <div class="amy-movie-item-front">
+                                          <div class="amy-movie-item-poster">
+                                              <a href="">
+                                                  <img th:src="@{/images/ut-lan(poster).jpg}" alt="">
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="amy-movie-item-back">
+                                          <div class="amy-movie-item-content">
+                                              <span class="amy-movie-field-imdb">T18</span>
+                                              <h3 class="amy-movie-field-title"><a href="">ÚT LAN OÁN LINH GIỮ CỦA (T18)</a></h3>
+                                              <div class="amy-movie-item-meta">
+                                                  <span class="amy-movie-field-mpaa">2D</span>
+                                                  <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 51 phút</span>
+                                              </div>
+                                              <p>Kinh dị</p>
+                                              <div class="amy-movie-field-desc">
+                                                  <p>Sau sự ra đi của cha, Lan (Phương Thanh) về một vùng quê và ở đợ cho nhà ông Danh (Mạc Văn Khoa) - một người đàn ông góa vợ, không con cái. Ngay sau khi bước chân vào căn nhà, Lan phải đối mặt với hàng loạt hiện tượng kỳ dị và những cái chết bí ẩn liên tục xảy ra. Cùng với Sơn (Quốc Trường) - một nhà văn chuyên viết truyện kinh dị, Lan bắt đầu lật mở những bí mật kinh hoàng, khám phá lịch sử đen tối của căn nhà.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- Movie Item 2 -->
+                              <div class="amy-movie-item">
+                                  <div class="amy-movie-item-inner">
+                                      <div class="amy-movie-item-front">
+                                          <div class="amy-movie-item-poster">
+                                              <a href="">
+                                                  <img th:src="@{/images/Dieu-uoc-cuoi-cung(poster).jpg}" alt="">
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="amy-movie-item-back">
+                                          <div class="amy-movie-item-content">
+                                              <span class="amy-movie-field-imdb">T16</span>
+                                              <h3 class="amy-movie-field-title"><a href="">ĐIỀU ƯỚC CUỐI CÙNG (T16)</a></h3>
+                                              <div class="amy-movie-item-meta">
+                                                  <span class="amy-movie-field-mpaa">2D</span>
+                                                  <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 54 phút</span>
+                                              </div>
+                                              <p>Gia Đình, Hài</p>
+                                              <div class="amy-movie-field-desc">
+                                                  <p>Hoàng đã nhờ hai người bạn chí cốt là Thy và Long giúp anh hoàn thành tâm nguyện cuối cùng: trở thành người đàn ông trưởng thành trước khi ra đi. Những nỗ lực của bạn bè và gia đình đã giúp Hoàng nhận ra rằng hạnh phúc lớn nhất của mình không phải là việc trở thành “đàn ông”, mà là được sống bên cạnh những người tuyệt vời, luôn yêu thương và hỗ trợ mình.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- Movie Item 3 -->
+                              <div class="amy-movie-item">
+                                  <div class="amy-movie-item-inner">
+                                      <div class="amy-movie-item-front">
+                                          <div class="amy-movie-item-poster">
+                                              <a href="">
+                                                  <img th:src="@{/images/To-doi-gau-nhi-Du-hi-4-phuong(poster).jpg}" alt="">
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="amy-movie-item-back">
+                                          <div class="amy-movie-item-content">
+                                              <span class="amy-movie-field-imdb">P</span>
+                                              <h3 class="amy-movie-field-title"><a href="">TỔ ĐỘI GẤU NHÍ DU HÍ 4 PHƯƠNG (P)</a></h3>
+                                              <div class="amy-movie-item-meta">
+                                                  <span class="amy-movie-field-mpaa">2D</span>
+                                                  <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 27 phút</span>
+                                              </div>
+                                              <p>Gia Đình, Hoạt Hình</p>
+                                              <div class="amy-movie-field-desc">
+                                                  <p>Vì một sai lầm đáng trách của shipper Cò, gấu Mic Mic tiếp tục phải lên đường tham gia vào một cuộc phiêu lưu bất đắc dĩ và không kém phần ly kỳ để tìm lại bé con của anh. Nhóm bạn lầy lội của Mic-Mic phải lao vào cuộc đua đổi trả em bé qua các châu lục, đối mặt với kangaroo nhảy nhót ở châu Đại Dương, hươu cao cổ kiêu kỳ ở savan châu Phi, dê núi tinh nghịch trên dãy Alps châu Âu, và thậm chí là một chú rồng phun lửa huyền thoại ở Trung Quốc cổ kính! Giữa những màn rượt đuổi nghẹt thở và tiếng cười nghiêng ngả, Mic-Mic phát hiện gấu con thật bị bắt cóc bởi con trăn gian xảo cùng hai kền kền lắm drama, buộc cả đội hợp sức với những người bạn khác để giải cứu. Liệu rằng Mic Mic sẽ bất lực trước hiện thực hay sẽ vùng lên để tìm kiếm hạnh phúc trọn vẹn cho cả gia đình?</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- Movie Item 4 -->
+                              <div class="amy-movie-item">
+                                  <div class="amy-movie-item-inner">
+                                      <div class="amy-movie-item-front">
+                                          <div class="amy-movie-item-poster">
+                                              <a href="">
+                                                  <img th:src="@{/images/Conan-Du-anh-cua-doc-nhan(poster).jpg}" alt="">
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="amy-movie-item-back">
+                                          <div class="amy-movie-item-content">
+                                              <span class="amy-movie-field-imdb">K</span>
+                                              <h3 class="amy-movie-field-title"><a href="">THÁM TỬ LỪNG DANH CONAN (PD)</a></h3>
+                                              <div class="amy-movie-item-meta">
+                                                  <span class="amy-movie-field-mpaa">2D</span>
+                                                  <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 50 phút</span>
+                                              </div>
+                                              <p>Bí Ẩn, Phiêu Lưu</p>
+                                              <div class="amy-movie-field-desc">
+                                                  <p>(Bản Phụ đề) Trên những ngọn núi tuyết của Nagano, một vụ án bí ẩn đã đưa Conan và các thám tử quay trở lại quá khứ. Thanh tra Yamato Kansuke - người đã bị thương nặng trong một trận tuyết lở nhiều năm trước - bất ngờ phải đối mặt với những ký ức đau thương của mình trong khi điều tra một vụ tấn công tại Đài quan sát Nobeyama. Cùng lúc đó, Mori Kogoro nhận được một cuộc gọi từ một đồng nghiệp cũ, tiết lộ mối liên hệ đáng ngờ giữa anh ta và vụ án đã bị lãng quên từ lâu. Sự xuất hiện của Morofushi Takaaki, cùng với những nhân vật chủ chốt như Amuro Tooru, Kazami và cảnh sát Tokyo, càng làm phức tạp thêm cuộc điều tra. Khi quá khứ và hiện tại đan xen, một bí ẩn rùng rợn dần dần được hé lộ - và ký ức của Kansuke nắm giữ chìa khóa cho mọi thứ.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- Movie Item 5 -->
+                              <div class="amy-movie-item">
+                                  <div class="amy-movie-item-inner">
+                                      <div class="amy-movie-item-front">
+                                          <div class="amy-movie-item-poster">
+                                              <a href="">
+                                                  <img th:src="@{/images/Phim-Xi-trum(poster).jpg}" alt="">
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="amy-movie-item-back">
+                                          <div class="amy-movie-item-content">
+                                              <span class="amy-movie-field-imdb">P</span>
+                                              <h3 class="amy-movie-field-title"><a href="">PHIM XÌ TRUM (P)</a></h3>
+                                              <div class="amy-movie-item-meta">
+                                                  <span class="amy-movie-field-mpaa">2D</span>
+                                                  <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 32 phút</span>
+                                              </div>
+                                              <p>Gia đình, Hoạt Hình</p>
+                                              <div class="amy-movie-field-desc">
+                                                  <p>Câu chuyện trở lại với ngôi làng Xì Trum, nơi mà mỗi ngày đều là lễ hội. Bỗng một ngày, sự yên bình của ngôi làng bị phá vỡ khi Tí Vua bị bắt cóc một cách bí ẩn bởi hai phù thủy độc ác Gà Mên và Cà Mên. Từ đây, Tí Cô Nương phải dẫn dắt các Tí đi vào thế giới thực để giải cứu ông. Với sự giúp đỡ của những người bạn mới, các Tí sẽ bước vào cuộc phiêu lưu khám phá định mệnh của mình để cứu lấy vũ trụ.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- Movie Item 6 -->
+                              <div class="amy-movie-item">
+                                  <div class="amy-movie-item-inner">
+                                      <div class="amy-movie-item-front">
+                                          <div class="amy-movie-item-poster">
+                                              <a href="">
+                                                  <img th:src="@{/images/Con-nit-quy(poster).jpg}" alt="">
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="amy-movie-item-back">
+                                          <div class="amy-movie-item-content">
+                                              <span class="amy-movie-field-imdb">T16</span>
+                                              <h3 class="amy-movie-field-title"><a href="">CON NÍT QUỶ (T16)</a></h3>
+                                              <div class="amy-movie-item-meta">
+                                                  <span class="amy-movie-field-mpaa">2D</span>
+                                                  <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 45 phút</span>
+                                              </div>
+                                              <p>Kinh dị</p>
+                                              <div class="amy-movie-field-desc">
+                                                  <p>20 năm sau thảm kịch Jatijajar, nỗi kinh hoàng mang tên Ummu Sibyan một lần nữa trỗi dậy. Lần này, điểm đến là ngôi làng hẻo lánh Giritirto. Sau một cuộc ẩu đả giữa đội bóng chính và đội dự bị, 8 đứa trẻ thất trận vội vã trở về làng giữa lúc chạng vạng. Trong cơn tức giận, chúng buông lời nguyền rủa đội thắng sẽ gặp tai họa, và rồi tai họa thật sự ập đến. Không ai hay biết, chính lời nguyền rủa vu vơ ấy đã vô tình đánh thức một thế lực tà ác từng bị chôn vùi trong quá khứ. Giữa rừng sâu lạnh lẽo và bóng đêm dày đặc, quỷ dữ đã cắn nuốt linh hồn một đứa trẻ. Từ đó, cuộc săn đuổi bắt đầu trở nên điên loạn và nghẹt thở.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- Movie Item 7 -->
+                              <div class="amy-movie-item">
+                                  <div class="amy-movie-item-inner">
+                                      <div class="amy-movie-item-front">
+                                          <div class="amy-movie-item-poster">
+                                              <a href="">
+                                                  <img th:src="@{/images/Mua-he-kinh-hai(poster).jpg}" alt="">
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="amy-movie-item-back">
+                                          <div class="amy-movie-item-content">
+                                              <span class="amy-movie-field-imdb">T18</span>
+                                              <h3 class="amy-movie-field-title"><a href="">MÙA HÈ KINH HÃI (T18)</a></h3>
+                                              <div class="amy-movie-item-meta">
+                                                  <span class="amy-movie-field-mpaa">2D</span>
+                                                  <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 50 phút</span>
+                                              </div>
+                                              <p>Kinh dị</p>
+                                              <div class="amy-movie-field-desc">
+                                                  <p>Khi năm người bạn vô tình gây ra một vụ tai nạn xe hơi chết người, họ quyết định che giấu và lập một giao ước giữ bí mật thay vì phải đối mặt với hậu quả. Một năm sau, quá khứ trở lại ám ảnh họ, buộc nhóm bạn phải đối diện với một sự thật khủng khiếp: có ai đó biết những gì họ đã làm vào mùa hè năm ngoái… và quyết tâm trả thù họ. Khi từng người trong nhóm bị kẻ sát nhân truy đuổi, họ phát hiện ra rằng điều này đã xảy ra trước đây. Cả nhóm tìm đến hai người sống sót từ vụ thảm sát huyền thoại ở Southport năm 1997 để cầu cứu.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- Movie Item 8 -->
+                              <div class="amy-movie-item">
+                                  <div class="amy-movie-item-inner">
+                                      <div class="amy-movie-item-front">
+                                          <div class="amy-movie-item-poster">
+                                              <a href="">
+                                                  <img th:src="@{/images/Ga-tu-than(poster).jpg}" alt="">
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="amy-movie-item-back">
+                                          <div class="amy-movie-item-content">
+                                              <span class="amy-movie-field-imdb">T16</span>
+                                              <h3 class="amy-movie-field-title"><a href="">GA TỬ THẦN (T16)</a></h3>
+                                              <div class="amy-movie-item-meta">
+                                                  <span class="amy-movie-field-mpaa">2D</span>
+                                                  <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>1 giờ 33 phút</span>
+                                              </div>
+                                              <p>Kinh dị</p>
+                                              <div class="amy-movie-field-desc">
+                                                  <p>Bước vào thế giới của Ghost Train, khán giả theo chân Da Gyeong (Joo Hyun Young) – một YouTuber trẻ tuổi đang tuyệt vọng cứu vãn tài khoản đang "flop" của mình bằng những câu chuyện kỳ bí. Với khát khao phá kỷ lục lượt xem, cô quyết định khám phá ga tàu điện ngầm Gwanglim – nơi phủ đầy truyền thuyết đô thị và nổi tiếng với hàng loạt vụ mất tích bí ẩn. Được dẫn lối bởi người gác ga kỳ lạ (Jeon Bae Soo), Da Gyeong không ngờ rằng chuyến đi liều lĩnh này lại đẩy cô vào vòng xoáy tâm linh rùng rợn, nơi mà chỉ khi chạm đến “đích cuối” của chuyến tàu định mệnh, cô mới mong tìm được lối thoát.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- Movie Item 9 -->
+                              <div class="amy-movie-item">
+                                  <div class="amy-movie-item-inner">
+                                      <div class="amy-movie-item-front">
+                                          <div class="amy-movie-item-poster">
+                                              <a href="">
+                                                  <img th:src="@{/images/Superman(poster).jpg}" alt="">
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="amy-movie-item-back">
+                                          <div class="amy-movie-item-content">
+                                              <span class="amy-movie-field-imdb">T13</span>
+                                              <h3 class="amy-movie-field-title"><a href="">SUPERMAN (T13)</a></h3>
+                                              <div class="amy-movie-item-meta">
+                                                  <span class="amy-movie-field-mpaa">2D</span>
+                                                  <span class="amy-movie-field-duration"><i class="fa fa-clock-o"></i>2 giờ 10 phút</span>
+                                              </div>
+                                              <p>Hành Động, Phiêu Lưu</p>
+                                              <div class="amy-movie-field-desc">
+                                                  <p>Mùa hè tới đây, Warner Bros. Pictures sẽ mang “Superman” - phim điện ảnh đầu tiên của DC Studios đến các rạp chiếu trên toàn cầu. Với phong cách riêng biệt của mình, James Gunn sẽ khắc họa người hùng huyền thoại trong vũ trụ DC hoàn toàn mới, với sự kết hợp độc đáo của các yếu tố hành động đỉnh cao, hài hước và vô cùng cảm xúc. Một Superman với lòng trắc ẩn và niềm tin vào sự thiện lương của con người sẽ xuất hiện đầy hứa hẹn trên màn ảnh.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- jQuery + Owl Carousel -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Custom JS -->
+    <script th:src="@{/js/home.js}"></script>
+</main>
