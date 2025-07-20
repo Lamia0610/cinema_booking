@@ -1,23 +1,12 @@
 <!DOCTYPE html>
-<html
-  lang="vi"
-  xmlns:th="http://www.thymeleaf.org"
-  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
->
-  <head>
-    <meta charset="UTF-8" />
-    <title>Trang chủ</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
+<html lang="vi"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<<<<<<< HEAD
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-=======
   <style>
     body {
       margin: 0;
@@ -176,8 +165,7 @@
 
   <div class="top-actions">
     <a href="#" class="btn"><i class="fa fa-ticket"></i> Vé của tôi</a>
-    <a href="#" class="btn">Đăng nhập</a>
-    <a href="#" class="btn">Đăng ký</a>
+    <a href="/login" class="btn">Đăng nhập / Đăng kí</a>
   </div>
 </header>
 
@@ -205,189 +193,10 @@
         link.classList.add("active");
       } else {
         link.classList.remove("active");
->>>>>>> 0ddae31e99a5dbfcce8f20f007d7d87e4b22dae2
       }
+    });
+  });
+</script>
 
-      .top-green-bar {
-        background: #7494ec;
-        color: white;
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
-        justify-content: space-between;
-      }
-
-      .logo {
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      .logo span {
-        font-weight: normal;
-      }
-
-      .search-box {
-        flex: 1;
-        max-width: 500px;
-        margin: 0 20px;
-        display: flex;
-        background: white;
-        border-radius: 30px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        transition: box-shadow 0.3s ease;
-      }
-
-      .search-box:focus-within {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      }
-
-      .search-box input {
-        flex: 1;
-        padding: 10px 16px;
-        border: none;
-        outline: none;
-        font-size: 14px;
-      }
-
-      .search-box button {
-        background: #111;
-        color: white;
-        border: none;
-        padding: 10px 18px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
-
-      .search-box button:hover {
-        background: grey;
-      }
-
-      .top-actions {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-      }
-
-      .top-actions .btn {
-        background-color: #ef516c;
-        color: black;
-        padding: 10px 20px;
-        font-weight: bold;
-        border-radius: 20px;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .top-actions .btn:hover {
-        background-color: #ef516c;
-        color: white;
-        border-color: white;
-      }
-
-      .black-nav {
-        background-color: #111;
-      }
-
-      .black-nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-      }
-
-      .black-nav li a {
-        display: block;
-        padding: 12px 20px;
-        color: #ddd;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 20px;
-        position: relative;
-        transition: all 0.3s ease;
-      }
-
-      .black-nav li a::after {
-        content: "";
-        position: absolute;
-        bottom: 8px;
-        left: 20%;
-        width: 60%;
-        height: 2px;
-        background-color: transparent;
-        transition: all 0.3s ease;
-      }
-
-      .black-nav li a:hover {
-        color: #ffffff;
-      }
-
-      .black-nav li a:hover::after {
-        background-color: #7494ec;
-      }
-
-      .black-nav li a.active {
-        color: #ff5e57;
-      }
-
-      .black-nav li a.active::after {
-        background-color: #ff5e57;
-      }
-
-      .main-box {
-        padding: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <header class="top-green-bar">
-      <div class="logo">
-        <img th:src="@{/images/logo_web_pink.png}" alt="Logo" />
-      </div>
-
-      <div class="search-box">
-        <input type="text" placeholder="Bạn tìm gì hôm nay?" />
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-      </div>
-
-      <div class="top-actions">
-        <a href="#" class="btn"><i class="fa fa-ticket"></i> Vé của tôi</a>
-        <a href="#" class="btn">Đăng nhập</a>
-        <a href="#" class="btn">Đăng ký</a>
-      </div>
-    </header>
-
-    <nav class="black-nav">
-      <ul>
-        <li><a href="/" th:href="@{/}">TRANG CHỦ</a></li>
-        <li><a href="/schedule" th:href="@{/schedule}">LỊCH CHIẾU</a></li>
-        <li><a href="/movies" th:href="@{/movies}">PHIM</a></li>
-        <li><a href="/promotions" th:href="@{/promotions}">KHUYẾN MÃI</a></li>
-        <li><a href="/contact" th:href="@{/contact}">LIÊN HỆ</a></li>
-      </ul>
-    </nav>
-
-    <main class="main-box" layout:fragment="content"></main>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(".black-nav li a");
-        const currentPath = window.location.pathname;
-
-        navLinks.forEach((link) => {
-          const href = link.getAttribute("href");
-          if (currentPath === href || (href === "/" && currentPath === "")) {
-            link.classList.add("active");
-          } else {
-            link.classList.remove("active");
-          }
-        });
-      });
-    </script>
-  </body>
+</body>
 </html>
