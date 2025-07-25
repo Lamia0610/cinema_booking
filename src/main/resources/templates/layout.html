@@ -146,10 +146,62 @@
     }
 
     .main-box {
-      padding-left: 20px;
-      padding-right: 20px;
       background-color: gray;
     }
+
+    .booking-footer {
+      background-color: #1a1a1a;
+      color: #f2f2f2;
+      padding: 40px 20px 15px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-contact {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-logo h2 {
+      color: #7494ec;
+      margin-bottom: 10px;
+    }
+
+    .footer-contact p {
+      margin: 5px 0;
+    }
+
+    .social-icons a {
+      margin-right: 12px;
+      font-size: 18px;
+      color: #f2f2f2;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ef516c;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+
+
   </style>
 
 </head>
@@ -181,6 +233,31 @@
 
 <main class="main-box" layout:fragment="content">
 </main>
+
+<footer class="booking-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>🎟 TITACHI</h2>
+      <p>Trải nghiệm đặt vé xem phim nhanh chóng, tiện lợi và an toàn.</p>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Liên hệ</h4>
+      <p>Email: titachi@cinebooking.vn</p>
+      <p>Hotline: 1900 123 456</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-google"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">© 2025 Titachi.</div>
+</footer>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {

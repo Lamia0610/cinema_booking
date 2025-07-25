@@ -32,3 +32,155 @@
 .owl-theme .owl-nav button.owl-next:hover {
     color: #ef516c;
 }
+
+/* section */
+#carousel-section {
+  padding: 30px 0;
+  background-color: #263d5c;
+}
+
+.carousel-title {
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+/* Tổng thể mỗi item */
+#carousel-section .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+}
+
+/* Ảnh poster */
+#carousel-section .film-poster {
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Thông tin phim - ẩn mặc định */
+#carousel-section .film-info {
+  display: none;
+  color: black;
+  padding-left: 10px;
+  max-width: 500px;
+}
+
+#carousel-section .film-info h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+#carousel-section .film-info p {
+  margin: 5px 0;
+  font-size: 10px;
+}
+
+.runtime {
+  font-size: 0.8rem;
+  color: #555; /* màu nhẹ hơn */
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+/* Khi ở giữa */
+#carousel-section .owl-item.active.center .item {
+  transform: scale(1.7);
+}
+
+#carousel-section .owl-item.active.center .film-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #e6e7e9;
+  
+}
+
+#carousel-section .owl-item.active.center .film-info {
+  display: block;
+}
+
+#carousel-section .owl-item.active.center .film-poster {
+  width: 150px;
+  height: 380px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+
+}
+
+#carousel-section .owl-item.active.center .film-info .btn {
+  padding: 5px 10px;
+  font-size: 10px;
+  text-decoration: none;
+  background-color: #ef516c;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#carousel-section .owl-item.active.center .film-info .btn:hover {
+  color: #ffffff;
+}
+
+
+
+
+
+/* Item bên ngoài: thu nhỏ và chỉ có ảnh */
+#carousel-section .owl-item:not(.center) .film-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+#carousel-section .owl-item:not(.center) .film-info {
+  display: none;
+}
+
+#carousel-section .owl-item:not(.center) .film-poster {
+  width: 150px;
+  /* opacity: 0.6; */
+  transition: opacity 0.3s ease;
+}
+
+
+/* === PROMOTION CAROUSEL === */
+
+#promotions-section {
+  background-color: #1b2b56;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#promotions-section .owl-carousel .item,
+#promotions-section .owl-carousel img.film-poster {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#promotions-section .owl-carousel .owl-item {
+  padding: 10px;
+}
+
