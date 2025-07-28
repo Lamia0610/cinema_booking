@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ | TITACHI Cinema</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/contact_style.css}" />
+</head>
+<main layout:fragment="content">
+    <section class="contact-header">
+        <h2>Liên Hệ Với <span>TITACHI Cinema</span></h2>
+        <p>Hãy liên hệ với chúng tôi để được hỗ trợ tốt nhất!</p>
+    </section>
+
+    <div class="contact-container">
+        <!-- Thông tin liên hệ -->
+        <div class="contact-info">
+            <h3>Thông tin liên hệ</h3>
+            <p><strong>TITACHI Cinema</strong></p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:0123456789">0123 456 789</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:contact@titachi.com">contact@titachi.com</a></p>
+            
+            <!-- Social Media -->
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Form liên hệ -->
+        <div class="contact-form">
+            <h3>Gửi tin nhắn</h3>
+            <form>
+                <input type="text" placeholder="Họ và Tên" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Nội dung tin nhắn" rows="4" required></textarea>
+                <button type="submit">Gửi Ngay</button>
+            </form>
+        </div>
+    </div>
+
+</main>
+</html>
