@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html
+  lang="vi"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema City - Movie Showtimes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" th:href="@{/css/ScheduleStyle.css}" />
+  </head>
+  <main layout:fragment="content">
+    <main class="container mx-auto px-4 py-8">
+      <section class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">
+          Lịch Chiếu Phim
+        </h2>
+
+        <div class="mb-8">
+          <div class="flex justify-center space-x-1 mb-6 overflow-x-auto py-2">
+            <button class="day-selector active-day px-4 py-2 rounded-md">
+              Thứ hai
+            </button>
+            <button
+              class="day-selector px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200"
+            >
+              Thứ ba
+            </button>
+            <button
+              class="day-selector px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200"
+            >
+              Thứ tư
+            </button>
+            <button
+              class="day-selector px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200"
+            >
+              Thứ năm
+            </button>
+            <button
+              class="day-selector px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200"
+            >
+              Thứ sáu
+            </button>
+            <button
+              class="day-selector px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200"
+            >
+              Thứ bảy
+            </button>
+            <button
+              class="day-selector px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200"
+            >
+              Chủ nhật
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Movie Card 1 -->
+          <div class="movie-card bg-white rounded-lg overflow-hidden">
+            <div class="relative">
+              <img
+                src="images/conan.webp"
+                alt="Sci-fi movie poster featuring futuristic cityscape with flying vehicles and neon lights"
+                class="w-full h-64 object-cover"
+              />
+              <div class="rating-badge px-2 py-1 rounded-md text-white text-sm">
+                ★ 9.0/10
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-1">
+                Thám tử lừng danh Conan:Dư ảnh của độc nhãn
+              </h3>
+              <div class="flex items-center text-sm text-gray-600 mb-3">
+                <span>PG-13</span>
+                <span class="mx-2">•</span>
+                <span>2h 15m</span>
+                <span class="mx-2">•</span>
+                <span>Sci-Fi, Adventure</span>
+              </div>
+              <p class="text-gray-700 mb-4 line-clamp-2">
+                Trên những ngọn núi tuyết của Nagano, một vụ án bí ẩn đã đưa
+                Conan và các thám tử quay trở lại quá khứ. Thanh tra Yamato
+                Kansuke - người đã bị thương nặng trong một trận tuyết lở nhiều
+                năm trước - bất ngờ phải đối mặt với những ký ức đau thương của
+                mình trong khi điều tra một vụ tấn công tại Đài quan sát
+                Nobeyama. Cùng lúc đó, Mori Kogoro nhận được một cuộc gọi từ một
+                đồng nghiệp cũ, tiết lộ mối liên hệ đáng ngờ giữa anh ta và vụ
+                án đã bị lãng quên từ lâu. Sự xuất hiện của Morofushi Takaaki,
+                cùng với những nhân vật chủ chốt như Amuro Tooru, Kazami và cảnh
+                sát Tokyo, càng làm phức tạp thêm cuộc điều tra. Khi quá khứ và
+                hiện tại đan xen, một bí ẩn rùng rợn dần dần được hé lộ - và ký
+                ức của Kansuke nắm giữ chìa khóa cho mọi thứ.
+              </p>
+
+              <div class="space-y-3">
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-2">Standard</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      10:30 AM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      1:45 PM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      4:20 PM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      7:00 PM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      9:30 PM
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-2">IMAX</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      2:30 PM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      6:15 PM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      9:45 PM
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <button
+                  class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-200"
+                  onclick="window.location.href='booking.html'"
+                >
+                  Đặt vé
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movie Card 2 -->
+          <div class="movie-card bg-white rounded-lg overflow-hidden">
+            <div class="relative">
+              <img
+                src="images/xitrum.jpg"
+                alt="Romantic comedy movie poster showing a couple laughing in Paris with iconic landmarks in background"
+                class="w-full h-64 object-cover"
+              />
+              <div class="rating-badge px-2 py-1 rounded-md text-white text-sm">
+                ★ 7.2/10
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-1">Xì Trum</h3>
+              <div class="flex items-center text-sm text-gray-600 mb-3">
+                <span>PG</span>
+                <span class="mx-2">•</span>
+                <span>1h 45m</span>
+                <span class="mx-2">•</span>
+                <span>Romance, Comedy</span>
+              </div>
+              <p class="text-gray-700 mb-4 line-clamp-2">
+                Câu chuyện trở lại với ngôi làng Xì Trum, nơi mà mỗi ngày đều là
+                lễ hội. Bỗng một ngày, sự yên bình của ngôi làng bị phá vỡ khi
+                Tí Vua bị bắt cóc một cách bí ẩn bởi hai phù thủy độc ác Gà Mên
+                và Cà Mên. Từ đây, Tí Cô Nương phải dẫn dắt các Tí đi vào thế
+                giới thực để giải cứu ông. Với sự giúp đỡ của những người bạn
+                mới, các Tí sẽ bước vào cuộc phiêu lưu khám phá định mệnh của
+                mình để cứu lấy vũ trụ.
+              </p>
+
+              <div class="space-y-3">
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-2">Standard</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      11:15 AM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      2:00 PM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      4:45 PM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      7:30 PM
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-2">Dolby Cinema</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      5:15 PM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      8:30 PM
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <button
+                  class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-200"
+                  onclick="window.location.href='booking.html'"
+                >
+                  Đặt vé
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movie Card 3 -->
+          <div class="movie-card bg-white rounded-lg overflow-hidden">
+            <div class="relative">
+              <img
+                src="images/mangmedibo.jpg"
+                alt="Thriller movie poster with shadowy figure in alley, dramatic lighting and intense atmosphere"
+                class="w-full h-64 object-cover"
+              />
+              <div class="rating-badge px-2 py-1 rounded-md text-white text-sm">
+                ★ 9.1/10
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-1">Mang mẹ đi bỏ</h3>
+              <div class="flex items-center text-sm text-gray-600 mb-3">
+                <span>R</span>
+                <span class="mx-2">•</span>
+                <span>2h 30m</span>
+                <span class="mx-2">•</span>
+                <span>Thriller, Crime</span>
+              </div>
+              <p class="text-gray-700 mb-4 line-clamp-2">
+                Mang Mẹ Đi Bỏ kể về số phận của Hoan (Tuấn Trần) - một chàng
+                trai trẻ ngày ngày hóa thân thành “thằng hề đường phố” với ngón
+                nghề cắt tóc vỉa hè để kiếm tiền lo cho mẹ. Mẹ Hoan là bà Lê Thị
+                Hạnh (Hồng Đào), mắc bệnh Alzheimer và cư xử như một đứa trẻ
+                con. Căn bệnh của mẹ không chỉ là gánh nặng mưu sinh, mà còn lấy
+                đi của Hoan một cuộc đời tự do với những ước mơ chưa thể thực
+                hiện. Một ngày, Hoan quyết định mang mẹ “đi bỏ” cho người anh
+                trai ở Hàn Quốc, người mà chính Hoan còn không biết mặt mũi ra
+                sao.
+              </p>
+
+              <div class="space-y-3">
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-2">Standard</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      4:20 PM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      7:10 PM
+                    </button>
+                    <button
+                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    >
+                      10:00 PM
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <button
+                  class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-200"
+                  onclick="window.location.href='booking.html'"
+                >
+                  Đặt vé
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">Coming Soon</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <!-- Coming Soon Card 1 -->
+          <div class="flex flex-col">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6cc6e4bd-7c20-464e-a6d4-678f97c31575.png"
+              alt="Animated movie poster featuring colorful fantasy creatures in magical forest"
+              class="w-full rounded-md mb-2"
+            />
+            <h3 class="font-semibold">Enchanted Tales</h3>
+            <p class="text-sm text-gray-600">Jun 15</p>
+          </div>
+          <!-- Coming Soon Card 2 -->
+          <div class="flex flex-col">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7c6af8f0-84de-4565-96b3-c998495d83d5.png"
+              alt="Historical drama movie poster showing ancient warriors in dramatic battle pose"
+              class="w-full rounded-md mb-2"
+            />
+            <h3 class="font-semibold">Empire's Fall</h3>
+            <p class="text-sm text-gray-600">Jun 22</p>
+          </div>
+          <!-- Coming Soon Card 3 -->
+          <div class="flex flex-col">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/81fc297c-99f3-4d48-9691-cb95d9350d99.png"
+              alt="Sci-fi horror movie poster with dark spaceship corridor and glowing alien eyes"
+              class="w-full rounded-md mb-2"
+            />
+            <h3 class="font-semibold">Deep Space 9</h3>
+            <p class="text-sm text-gray-600">Jun 29</p>
+          </div>
+          <!-- Coming Soon Card 4 -->
+          <div class="flex flex-col">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8baab08a-1f75-4be9-b01f-70db4ff1aa06.png"
+              alt="Documentary poster featuring towering mountain peaks and climbers at sunset"
+              class="w-full rounded-md mb-2"
+            />
+            <h3 class="font-semibold">Everest: The Summit</h3>
+            <p class="text-sm text-gray-600">Jul 6</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </main>
+</html>
