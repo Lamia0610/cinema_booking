@@ -1,0 +1,37 @@
+.movies-list {
+  background-color: whitesmoke;
+  padding: 40px 20px;
+}
+
+.movie-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.film-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.film-name {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.category {
+  color: #7494ec;
+  font-size: 14px;
+}
