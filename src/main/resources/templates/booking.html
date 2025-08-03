@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html
+  lang="vi"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Vé - Cinema City</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f1f5f9;
+        color: #1e293b;
+      }
+
+      .main-color {
+        background-color: #7494ec;
+      }
+      .main-color-hover:hover {
+        background-color: #5f7ed8;
+      }
+      .main-color-text {
+        color: black;
+      }
+      .main-border {
+        border-color: #7494ec;
+      }
+    </style>
+  </head>
+  <main layout:fragment="content">
+    <main class="max-w-2xl mx-auto px-6 py-12">
+      <h1
+        class="text-4xl font-extrabold text-center main-color-text mb-10 tracking-wide"
+      >
+        Đặt Vé Xem Phim
+      </h1>
+      <form
+        class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 space-y-6"
+      >
+        <div>
+          <label
+            for="movie-title"
+            class="block font-semibold mb-1 text-gray-700"
+            >🎬 Tên Phim:</label
+          >
+          <input
+            type="text"
+            id="movie-title"
+            class="border main-border rounded-lg px-4 py-2 w-full bg-gray-100"
+            readonly
+          />
+        </div>
+        <div>
+          <label for="location" class="block font-semibold mb-1 text-gray-700"
+            >📍 Địa chỉ:</label
+          >
+          <input
+            type="text"
+            id="location"
+            class="border main-border rounded-lg px-4 py-2 w-full bg-gray-100"
+            readonly
+          />
+        </div>
+        <div>
+          <label for="showtime" class="block font-semibold mb-1 text-gray-700"
+            >⏰ Thời gian chiếu:</label
+          >
+          <select
+            id="showtime"
+            class="border main-border rounded-lg px-4 py-2 w-full bg-white"
+          >
+            <option>10:30 AM</option>
+            <option>1:45 PM</option>
+            <option>4:20 PM</option>
+            <option>7:00 PM</option>
+            <option>9:30 PM</option>
+          </select>
+        </div>
+        <div>
+          <label
+            for="num-tickets"
+            class="block font-semibold mb-1 text-gray-700"
+            >🎟️ Số lượng vé:</label
+          >
+          <input
+            type="number"
+            id="num-tickets"
+            min="1"
+            value="1"
+            class="border main-border rounded-lg px-4 py-2 w-full"
+          />
+        </div>
+        <div>
+          <label for="name" class="block font-semibold mb-1 text-gray-700"
+            >👤 Họ và tên:</label
+          >
+          <input
+            type="text"
+            id="name"
+            required
+            class="border main-border rounded-lg px-4 py-2 w-full"
+          />
+        </div>
+        <div>
+          <label for="email" class="block font-semibold mb-1 text-gray-700"
+            >📧 Email:</label
+          >
+          <input
+            type="email"
+            id="email"
+            required
+            class="border main-border rounded-lg px-4 py-2 w-full"
+          />
+        </div>
+        <div>
+          <label for="phone" class="block font-semibold mb-1 text-gray-700"
+            >📱 Số điện thoại:</label
+          >
+          <input
+            type="tel"
+            id="phone"
+            required
+            class="border main-border rounded-lg px-4 py-2 w-full"
+          />
+        </div>
+        <div class="pt-6 text-center">
+          <button
+            type="submit"
+            class="main-color main-color-hover text-white font-semibold px-6 py-3 rounded-lg transition duration-200 shadow-md hover:shadow-lg"
+          >
+            Xác Nhận Đặt Vé
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <script>
+      // Lấy tham số từ URL (?movie=...&location=...)
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Hiển thị dữ liệu phim và địa chỉ
+      document.getElementById("movie-title").value =
+        getQueryParam("movie") || "Chưa chọn phim";
+      document.getElementById("location").value =
+        getQueryParam("location") || "Chưa có địa chỉ";
+    </script>
+  </main>
+</html>

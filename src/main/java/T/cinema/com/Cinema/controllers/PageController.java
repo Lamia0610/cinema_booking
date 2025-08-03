@@ -35,4 +35,9 @@ public class PageController {
     public String loginPage() {
         return "LoginPage";
     }
+
+    @GetMapping("/booking")
+    public String showBookingPage() {
+        return "booking";
+    }
 }
