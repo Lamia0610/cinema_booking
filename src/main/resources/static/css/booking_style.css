@@ -1,0 +1,15 @@
+body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f1f5f9;
+      color: #1e293b;
+    }
+
+    .main-color {
+      background-color: #7494ec;
+    }
+    .main-color-hover:hover {
+      background-color: #5f7ed8;
+    }
+    .main-border {
+      border-color: #7494ec;
+    }

@@ -8,8 +8,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cinema City - Movie Showtimes</title>
+    <title>Cinema City - Lịch Chiếu Phim</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script th:src="@{/js/schedule.js}"></script>
     <link rel="stylesheet" th:href="@{/css/ScheduleStyle.css}" />
   </head>
   <main layout:fragment="content">
@@ -58,12 +59,11 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Movie Card 1 -->
           <div class="movie-card bg-white rounded-lg overflow-hidden">
             <div class="relative">
               <img
                 src="images/conan.webp"
-                alt="Sci-fi movie poster featuring futuristic cityscape with flying vehicles and neon lights"
+                alt="Thám tử lừng danh Conan:Dư ảnh của độc nhãn"
                 class="w-full h-64 object-cover"
               />
               <div class="rating-badge px-2 py-1 rounded-md text-white text-sm">
@@ -100,71 +100,27 @@
                 <div>
                   <h4 class="font-medium text-gray-800 mb-2">Standard</h4>
                   <div class="flex flex-wrap gap-2">
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      10:30 AM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      1:45 PM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      4:20 PM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      7:00 PM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      9:30 PM
-                    </button>
-                  </div>
-                </div>
-                <div>
-                  <h4 class="font-medium text-gray-800 mb-2">IMAX</h4>
-                  <div class="flex flex-wrap gap-2">
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      2:30 PM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      6:15 PM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      9:45 PM
-                    </button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="10:30 AM">10:30 AM</button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="1:45 PM">1:45 PM</button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="4:20 PM">4:20 PM</button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="7:00 PM">7:00 PM</button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="9:30 PM">9:30 PM</button>
                   </div>
                 </div>
               </div>
-              <div class="mt-4">
-                <button
-                  class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-200"
-                  onclick="window.location.href='/booking'"
-                >
+              <div class="mt-4 text-center">
+                <button class="book-ticket-btn main-color main-color-hover text-white font-semibold px-6 py-3 rounded-lg transition duration-200 shadow-md hover:shadow-lg">
                   Đặt vé
                 </button>
               </div>
             </div>
           </div>
 
-          <!-- Movie Card 2 -->
           <div class="movie-card bg-white rounded-lg overflow-hidden">
             <div class="relative">
               <img
                 src="images/xitrum.jpg"
-                alt="Romantic comedy movie poster showing a couple laughing in Paris with iconic landmarks in background"
+                alt="Xì Trum"
                 class="w-full h-64 object-cover"
               />
               <div class="rating-badge px-2 py-1 rounded-md text-white text-sm">
@@ -194,61 +150,27 @@
                 <div>
                   <h4 class="font-medium text-gray-800 mb-2">Standard</h4>
                   <div class="flex flex-wrap gap-2">
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      11:15 AM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      2:00 PM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      4:45 PM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      7:30 PM
-                    </button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="11:15 AM">11:15 AM</button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="2:00 PM">2:00 PM</button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="4:45 PM">4:45 PM</button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="7:30 PM">7:30 PM</button>
                   </div>
                 </div>
-                <div>
-                  <h4 class="font-medium text-gray-800 mb-2">Dolby Cinema</h4>
-                  <div class="flex flex-wrap gap-2">
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      5:15 PM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      8:30 PM
-                    </button>
-                  </div>
-                </div>
+
               </div>
-              <div class="mt-4">
-                <button
-                  class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-200"
-                  onclick="window.location.href='/booking'"
-                >
+              <div class="mt-4 text-center">
+                <button class="book-ticket-btn main-color main-color-hover text-white font-semibold px-6 py-3 rounded-lg transition duration-200 shadow-md hover:shadow-lg">
                   Đặt vé
                 </button>
               </div>
             </div>
           </div>
 
-          <!-- Movie Card 3 -->
           <div class="movie-card bg-white rounded-lg overflow-hidden">
             <div class="relative">
               <img
                 src="images/mangmedibo.jpg"
-                alt="Thriller movie poster with shadowy figure in alley, dramatic lighting and intense atmosphere"
+                alt="Mang mẹ đi bỏ"
                 class="w-full h-64 object-cover"
               />
               <div class="rating-badge px-2 py-1 rounded-md text-white text-sm">
@@ -280,29 +202,14 @@
                 <div>
                   <h4 class="font-medium text-gray-800 mb-2">Standard</h4>
                   <div class="flex flex-wrap gap-2">
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      4:20 PM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      7:10 PM
-                    </button>
-                    <button
-                      class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                    >
-                      10:00 PM
-                    </button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="4:20 PM">4:20 PM</button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="7:10 PM">7:10 PM</button>
+                    <button class="showtime-btn bg-blue-600 text-white px-3 py-1 rounded text-sm" data-showtime="10:00 PM">10:00 PM</button>
                   </div>
                 </div>
               </div>
-              <div class="mt-4">
-                <button
-                  class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-200"
-                  onclick="window.location.href='/booking'"
-                >
+              <div class="mt-4 text-center">
+                <button class="book-ticket-btn main-color main-color-hover text-white font-semibold px-6 py-3 rounded-lg transition duration-200 shadow-md hover:shadow-lg">
                   Đặt vé
                 </button>
               </div>
@@ -314,41 +221,37 @@
       <section class="mb-10">
         <h2 class="text-3xl font-bold mb-6 text-gray-800">Coming Soon</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <!-- Coming Soon Card 1 -->
           <div class="flex flex-col">
             <img
               src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6cc6e4bd-7c20-464e-a6d4-678f97c31575.png"
-              alt="Animated movie poster featuring colorful fantasy creatures in magical forest"
+              alt="Enchanted Tales poster"
               class="w-full rounded-md mb-2"
             />
             <h3 class="font-semibold">Enchanted Tales</h3>
             <p class="text-sm text-gray-600">Jun 15</p>
           </div>
-          <!-- Coming Soon Card 2 -->
           <div class="flex flex-col">
             <img
               src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7c6af8f0-84de-4565-96b3-c998495d83d5.png"
-              alt="Historical drama movie poster showing ancient warriors in dramatic battle pose"
+              alt="Empire's Fall poster"
               class="w-full rounded-md mb-2"
             />
             <h3 class="font-semibold">Empire's Fall</h3>
             <p class="text-sm text-gray-600">Jun 22</p>
           </div>
-          <!-- Coming Soon Card 3 -->
           <div class="flex flex-col">
             <img
               src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/81fc297c-99f3-4d48-9691-cb95d9350d99.png"
-              alt="Sci-fi horror movie poster with dark spaceship corridor and glowing alien eyes"
+              alt="Deep Space 9 poster"
               class="w-full rounded-md mb-2"
             />
             <h3 class="font-semibold">Deep Space 9</h3>
             <p class="text-sm text-gray-600">Jun 29</p>
           </div>
-          <!-- Coming Soon Card 4 -->
           <div class="flex flex-col">
             <img
               src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8baab08a-1f75-4be9-b01f-70db4ff1aa06.png"
-              alt="Documentary poster featuring towering mountain peaks and climbers at sunset"
+              alt="Everest: The Summit poster"
               class="w-full rounded-md mb-2"
             />
             <h3 class="font-semibold">Everest: The Summit</h3>
@@ -358,4 +261,5 @@
       </section>
     </main>
   </main>
+
 </html>
